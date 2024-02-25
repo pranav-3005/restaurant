@@ -4,113 +4,382 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
+    gap: 0px;
+    font-family: "Ruda", sans-serif;
+    /* overflow:visible */
 }
 #nav{
-    height: 111px ;
-    width: 100%;
-    color: white;
-    font-family: "Ruda", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    background-color: black;
-    
-}
-
-.header-left{
-    font-size: 29px;
-    padding-left: 50px;
-}
-
-.header-center{
-    list-style-type: none; display:flex; flex-direction: row;
-}
-
-.header-icon-list{
-    /* width: 62.33px;
-    height: 43.12px; */
+    margin-bottom: 0px;    
+    /* border:10px  solid burlywood; */
     display: flex;
     flex-direction: row;
-    padding-right: 50px;
+    justify-content: space-between;
+    padding-inline: 40px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    background-color: black;
+    z-index: 2 !important; 
+}
+
+#header-left{
+    font-size: 30px;
+    font-weight: 400;
+}
+#header-center{
     
-}
-
-.nav-list{
-    margin: 10px 20px;
-    padding 2px;
-}
-
-.header-icon{
-    margin: 10px 20px;
-    padding 2px;
-    font-size: 62px 43px;
-}
-
-/* 2nd section */
-
-#rectange-image{
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 19px;
+    list-style:none;
     display: flex;
-    position:;
+    flex-direction: row;
+    gap: 30px;
+}
+#header-right{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style:none;
+    font-size: 20px ;
+    justify-content: space-between;
+}
 
-    /* margin-top: 20px; */
-    
-    box-sizing: border-box;
+/* --------------- */
 
-    /* position: absolute; */
-    width: 100vw;
-    height: 100vh;
-    /* left: -23px;
-    top: 100px; */
+#image{
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
 
-    /* background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(39, 39, 39, 0.05) 0.01%, rgba(31, 31, 31, 0.0529908) 0.02%, rgba(0, 0, 0, 0.065) 13.02%, rgba(0, 0, 0, 0.5) 100%);
-    filter: drop-shadow(3px 6px 18px rgba(0, 0, 0, 0.25)); */
-
-    background-image: url(https://s3-alpha-sig.figma.com/img/791f/9ca1/801cf713555ea70ba295e8de05e15650?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X05ktVGgkF7l99DPltM4oUNF8FSxQyV2vB5SGqU26GuozjjNABvtX0to0ycVrDl66BJhfK2bBN976yWPNrEX8spcX99BRS8LECRGbNjHuZbWQr~EBpRlT-4d8NVybi0ImKiH4dCPOO2Pb8xjJOvazsNFEZKwjyZWsid2~X16Ypl~kD7IW6rUsOP1-yTsvqRCKCwQt8ssC7sOtU4c49pAh~T49a3TBJkqy1CXvxW2mzhd4zWnF72bFiBLYVD47hj15je5REEVen25-0PetmUY3cQNspRCO7bobsZodVjnUvgj8pmSxOjX18841WJDpCPU3774NKwvzRA-wKJr7d8Qeg__);
-    background-repeat: no-repeat;
+#bg-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 2%;
+    border: 0px solid white;
+    background: rgba(0,0 , 0, 0.2) url(https://s3-alpha-sig.figma.com/img/791f/9ca1/801cf713555ea70ba295e8de05e15650?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=X05ktVGgkF7l99DPltM4oUNF8FSxQyV2vB5SGqU26GuozjjNABvtX0to0ycVrDl66BJhfK2bBN976yWPNrEX8spcX99BRS8LECRGbNjHuZbWQr~EBpRlT-4d8NVybi0ImKiH4dCPOO2Pb8xjJOvazsNFEZKwjyZWsid2~X16Ypl~kD7IW6rUsOP1-yTsvqRCKCwQt8ssC7sOtU4c49pAh~T49a3TBJkqy1CXvxW2mzhd4zWnF72bFiBLYVD47hj15je5REEVen25-0PetmUY3cQNspRCO7bobsZodVjnUvgj8pmSxOjX18841WJDpCPU3774NKwvzRA-wKJr7d8Qeg__);
     background-size: 100% 100%;
-    color: white;
-    /* background-color: rgba(0, 0, 0, 0.9);
-    opacity:unset; */
-    /* filter:blur(10px);
-    -webkit-filter: blur(10px); */
+    background-blend-mode: darken;
+
+    filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+}
+#image-text1{
+    position: absolute;
+    font-family: "Quattrocento", serif;
+    width: 40%;
+    height: 180;
+    font-size:70px;
+    font-weight:500;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 50px;
+}
+
+#image-text2{
+    position: absolute;
+    width: 22%;
+    top: 25%;
+    left: 7%;
+    font-size:16px;
+    font-weight:100;
+    text-align: left;
+    line-height: 25px;
+    margin-top: 50px;
+    border-top: 4px solid red;
+    padding-top: 40px;
+}
+
+/* ------------------- */
+
+.h2{
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "Quattrocento", serif;
+    width: 450px;
+    height: 52px;
+    /* background-color: aqua; */
+    align-self:center;
+    margin-top: 80px;
+    padding-bottom: 66px;
+    border-bottom: 4px solid red;
+} 
+
+#about-us{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    margin-top: 80px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+#text-area{
+    display: flex;
+    flex-direction: column;
+}
+#about-us-text{
+    /* border-top: 4px solid red; */
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 80px;
+    width:450px;
+    height: 250px;
+    margin-right: 90px;
+    font-size:20px;
+
+    
+
+}
+
+#text-border{
+    border-top: 4px solid red;
+    width: 360px;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+#about-us-image{
+    width: 420px;
+    height: 320px;
+}
+
+/* ------------------------- */
+
+#menu-text{
+    font-size:20px;
+    margin-top: 35px;
+    padding-top: 10px;
+    align-self: center;
+    width: 850px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+#menu-grid{
+    margin-top: 30px;
+    width: 850px;
+    height: 800px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "a b"
+                         "c d"
+                         "e f";
+    gap: 20px;
+    margin-bottom: 30px;
+} 
+
+.menu-item{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0px;
+}
+
+#menu-item1{
+    grid-area: a;
+    
+}
+
+#menu-item2{
+    grid-area: b;
+}
+
+#menu-item3{
+    grid-area: c;
+}
+
+#menu-item4{
+    grid-area: d;
+}
+
+#menu-item5{
+    grid-area: e;
+}
+
+#menu-item6{
+    grid-area: f;
+}
+
+.menu-image{
+    min-width: 200px;
+    height: 160px;
+
+}
+
+/*  ------------------------------------- */
+
+#carousel-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+
+#carousel-image{
+  
+    width: 850px;
+    height: 500px;
+}
+
+#carousel-image-buttons{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    list-style-type: none;
+    font-size: 8px;
+    gap: 5px;
+}
+
+#gallary-area{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "a b c";
+    width:900px;
+    height: 650px;
+    align-self: center;
+}
+
+#gallary-left{
+    grid-area: a;
+    background-image: url(https://s3-alpha-sig.figma.com/img/c6ef/4438/3e685beae728d1d4de3d5b0aa1ad09ab?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GwPtLl~M0xISmHVNNiD4LNDsNx~XJQPP-OYRQaOmTFha4VgVfopRR84SeE-bH2A6ECmCJ1D9MA7p3~EXLr8YDDiiaAmEkTb93~Ek1abdoXkVu1oTKUtiyfVkGib9HQPBoU95c0JtcYhSltYRJ9lLZGyN7mRLQ82QGb0Y6J1j~BZenp7FHEhRDtgjIVsrMwO7HsFH~xWsPJjexu0hlV8KyC-0ElhdJB4eDL0vUMbsHn835qQvNygfJieTWFysdtrTCghMXwLKABoXkqrK4t-8z7QmJPr9yNVSBwF9coiiRDOvY6DSTvDS8XkepTnEglHNsWYUCdNf37eJzZodsJRt-Q__);
+    background-size: 100% 100%;
+    
+}
+
+#gallary-right1{
+    grid-area: b;
+    display: flex;
     flex-direction: column;
 }
 
-.text {
-    font-family: "Quattrocento", serif;
-    color: white;
-    width: 30%;
-    position: absolute;
-    padding-left: 20px;
-    top: 20%;
-    left: 3%;
-    /* transform: translate(-50%, -50%); */
-    text-align: left;
-    font-weight: 700;
-    font-size: 70px;
-    border-bottom: 10px solid red;
-  }
-
-
-.text2{
-    text-align: center;
-    font-family: "Quattrocento", serif;
-    color: white;
-    width: 28%;
-    position: absolute;
-    padding-left: 30px;
-    top: 55%;
-    left: 3%;
-    /* transform: translate(-50%, -50%); */
-    text-align: left;
-    font-weight: 400;
-    font-size: 18px;
-    /* border-bottom: 13px solid red; */
+#gallary-right2{
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
 }
 
-#about-us{
-    margin-top: 50px;
+.right1{
+    background-size: 100% 100%;
+    flex: 1;
+    margin: 10px;
+}
+
+.right2{
+    background-size: 100% 100%;
+    flex:1;
+    margin: 10px;
+}
+
+/*  ---------------------------------------------  */
+
+#find-us-area{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width:900px;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#find-us-left{
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#left2{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b"
+                         "c d";
+    width: 100%;
+    height: 100%;
+}
+
+#ic1{
+    grid-area: a;
+    font-size: 30px;
+}
+#ic2{
+    grid-area: c;
+    font-size: 30px
+}
+#txt1{
+    grid-area: b;
+}
+#txt2{
+    grid-area: d;
+}
+
+#find-us-right{
+    background-image: url(https://s3-alpha-sig.figma.com/img/da43/56cc/f9ec251cf90c9926f419fcf9a639214e?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PskIbnVoVY8Y0nQIce20xwiD8PfMDkymGXTTnkOZhe23xXwNvsV843Ca64x3soJcXwGspAxULn0jBC0Qo5oZ1QJbFT1Y3xwkyBkmKYJ8IVIPih32xkyC9fkgkWJ5nooU6LkcnOPTUAaDjx0WQKmHXRmBVqct4oyUOIBLlaCoJa9LJX1TJSgvFzZulHWA3eHTTOOepRTMJqSDYoespbRWWpyuO6XsaM~pn2y78iDMC7Xvt6PJ82UYrStdSfS-r1a8pXUpGj6eebnqF3a0AnlBNo-2QqcjZgHxEV3Kgw0do6gzmOvtt8ZX6-gRa0sVlM5ZPMMCY9qA392gChwXO9Ss5w__);
+    background-size: 100% 100%;
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+    
+}
+
+/* ------------------------------ */
+
+#footer{
+    margin-top: 80px;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+#footer-left{
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 80px;
+    width: 70%;
+}
+#footer-right{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b"
+                         "c d";
+    width: 30%;
+    height: -80px;
+    gap: 5px;
+    justify-content: end;
+}
+
+#i1{
+    margin-top: 20px;
+    grid-area: a;
+    font-size: 30px;
+}
+#i2{
+    grid-area: c;
+    font-size: 30px;
+}
+#p1{
+    margin-top: 20px;
+    grid-area: b;
+}
+#p2{
+    grid-area: d;
 }
